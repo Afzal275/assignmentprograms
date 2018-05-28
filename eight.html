@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculating total sum</title>
+    <script>
+        function FindSum() {
+            var input = document.getElementById('value').value;
+            var object = JSON.parse(input);
+            console.log(object);
+            var result = 0;
+            for(var o in object)
+                result += object[o];
+            document.getElementById('result').innerHTML = result;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="value">
+    <button onclick="FindSum()">Find Sum</button>
+    <p id='result'></p>
+</body>
+</html>

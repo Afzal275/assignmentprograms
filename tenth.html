@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array Palindrome</title>
+    <script>
+        function checkPalindromeArray() {
+            var input = document.getElementById('value').value;
+            var a = input.split(",");
+            var b = [];
+            var i,j,f=0,l=0;
+            for(var k=0;k<a.length;k++)
+            {
+                f=0;
+                temp = a[k].toLowerCase();
+                for(i=0, j=temp.length-1; i<=j; i++, j--)
+                {
+                    if(temp[i]!=temp[j])
+                    {
+                        f=1;
+                        break;
+                    }                
+                }
+                if(f==0)
+                    b[l++] = temp;
+            }
+            document.getElementById('result').innerHTML = '[' + b.join(", ") +']';
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="value">
+    <button onclick="checkPalindromeArray()">CheckPalindrome</button>
+    <p id="result"></p>
+</body>
+</html>
