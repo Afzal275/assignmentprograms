@@ -19,7 +19,7 @@ function pairs()
     {
         for(var j=i+1;j<input.length;j++)
         {
-            if(input[i]+input[j]==0)
+            if(input[i]+input[j]==n)
             document.getElementById("answer").innerHTML +="\""+input[i]+"\""+","+"\""+input[j]+"\""<1
         }
     }
